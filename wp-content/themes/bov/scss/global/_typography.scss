@@ -1,0 +1,127 @@
+//Стили для всех контентов страниц
+@mixin editor($path: $themeFolder, $font-size: 16px) {
+  line-height: 1.6;
+
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    line-height: 1.25;
+  }
+  h1 {
+    @include fluidSize(20px, 32px, 320px, 1280px, 'font-size');
+    margin-bottom: 10px;
+  }
+  h2 {
+    margin-bottom: 10px;
+    @include fluidSize(24px, 40px, 320px, 1280px, 'font-size');
+  }
+  h3, h4, h5, h6 {
+    margin-bottom: 15px;
+    font-size: 18px;
+  }
+
+  p {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+  ul {
+    margin-bottom: 20px;
+    padding-left: 0;
+    list-style: inside none;
+
+    li {
+      &:before {
+        content: '';
+        display: inline-block;
+        margin-right: 10px;
+        border-radius: 50%;
+        width: 8px;
+        height: 8px;
+        background-color: $accent;
+        vertical-align: middle;
+      }
+    }
+  }
+  ol {
+    margin-bottom: 20px;
+    padding-left: 0;
+    list-style: inside decimal;
+  }
+  li {
+    margin-bottom: 10px;
+  }
+
+  blockquote {
+    font-size: 2.4rem;
+
+    &:before {
+      // content: '';
+      // display: block;
+      // margin-bottom: 10px;
+      // width: 43px;
+      // height: 40px;
+      // background: url($path + 'img/quote.svg') no-repeat;
+    }
+  }
+  strong {
+    font-weight: bold;
+  }
+  i, em {
+    font-style: italic;
+  }
+
+
+  table {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    border-collapse: collapse;
+    border: 1px solid $accent;
+    max-width: 100%;
+    overflow-y: auto;
+
+    tr:first-child {
+      text-align: center;
+      font-weight: bold;
+    }
+
+    tr:nth-child(odd) {
+      td {
+        background: #eee;
+      }
+    }
+
+    tr:nth-child(even) {
+      td {
+        background: #fff;
+      }
+    }
+
+    td {
+      border: 1px solid $accent;
+      padding: 15px 30px;
+      text-align: left;
+      vertical-align: middle;
+      font-size: 16px;
+
+      p {
+        margin-bottom: 0;
+      }
+    }
+  }
+  a {
+    border-bottom: 1px solid $accent;
+    transition: $transition-style-fast;
+
+    &:hover {
+      border-bottom-color: transparent;
+    }
+  }
+  a[href*='.jpg'],
+  a[href*='.png'] {
+    border-bottom: none;
+  }
+
+}
+
+

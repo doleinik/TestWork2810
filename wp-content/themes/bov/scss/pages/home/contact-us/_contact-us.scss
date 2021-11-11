@@ -1,0 +1,59 @@
+.contact-us{
+  background-color: #4ac47f;
+
+  @include breakpoint($brp-1280) {
+    padding: 85px 0 80px;
+  }
+
+  @include breakpoint($brp-320) {
+    padding: 70px 0 60px;
+  }
+
+  &__title {
+    color: #fff;
+    font-weight: 600;
+
+    @include breakpoint($brp-1920) {
+      font-size: 48px;
+    }
+
+    @include breakpoint($brp-1280) {
+      margin-bottom: 60px;
+      font-size: 40px;
+    }
+
+    @include breakpoint($brp-320) {
+      margin-bottom: 25px;
+      font-size: 35px;
+    }
+  }
+
+  &__wrapper{
+    display: flex;
+    justify-content: space-between;
+
+    @include breakpoint($brp-1280) {
+      flex-direction: row;
+    }
+
+    @include breakpoint($brp-320) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__info {
+    width: 100%;
+    max-width: 770px;
+    font-weight: 600;
+
+    @include breakpoint($brp-1280) {
+      font-size: 25px;
+      margin-bottom: 0;
+    }
+
+    @include breakpoint($brp-320) {
+      margin-bottom: 30px;
+      font-size: 18px;
+    }
+  }
+}

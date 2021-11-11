@@ -1,0 +1,24 @@
+.hero {
+  padding: 208px 0 210px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  &__title {
+    text-align: center;
+    color: #fff;
+    font-weight: 700;
+
+    @include breakpoint($brp-1920) {
+      font-size: 60px;
+    }
+
+    @include breakpoint($brp-1280) {
+      font-size: 50px;
+    }
+
+    @include breakpoint($brp-320) {
+      font-size: 40px;
+    }
+  }
+}

@@ -1,0 +1,70 @@
+form {
+  .agree {
+    width: auto!important;
+    margin-right: 20px;
+  }
+
+  input {
+    border: none;
+    outline: none;
+    background-color: rgba(#fff, 0);
+  }
+
+  label {
+    display: flex;
+  }
+}
+
+.form {
+  &__input {
+    color: #fff;
+    z-index: 100;
+
+    @include breakpoint($brp-768){
+      margin-left: 65px;
+      width: calc(100% - 65px);
+    }
+
+    @include breakpoint($brp-320){
+      margin-left: 20px;
+      width: calc(100% - 20px);
+    }
+  }
+}
+
+.label__input {
+  display: flex;
+  margin: 5px 0 25px;
+  padding-bottom: 11px;
+  border-bottom: 2px solid #fff;
+  color: #fff;
+
+  @include breakpoint($brp-768){
+    font-size: 27px;
+  }
+
+  @include breakpoint($brp-320){
+    font-size: 18px;
+  }
+}
+
+
+.label__agree {
+  color: #fff;
+  margin-top: 57px;
+  margin-bottom: 51px;
+
+  @include breakpoint($brp-768){
+    font-size: 22px;
+  }
+
+  @include breakpoint($brp-320){
+    font-size: 18px;
+  }
+}
+
+.result_form {
+  color: #ba0a0a;
+  font-size: 24px;
+  margin-top: 20px;
+}

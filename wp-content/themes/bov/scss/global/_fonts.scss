@@ -1,0 +1,8 @@
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-display: swap;
+  src: url('./' + $themeFolder + 'fonts/Roboto.woff2') format('woff2'),
+  url($themeFolder + 'fonts/Roboto.woff') format('woff');
+}
+

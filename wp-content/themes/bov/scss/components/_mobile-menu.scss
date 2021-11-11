@@ -1,0 +1,64 @@
+.mobile-menu {
+  overflow-y: auto;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 30px 15px;
+  z-index: 1000;
+  background-color: rgba(#000, .8);
+  transition: all .3s ease-out;
+
+  @include breakpoint($brp-1280) {
+    position: static;
+    overflow: visible;
+    flex-direction: row;
+    align-items: center;
+    flex-grow: 0;
+    padding: 0;
+    background-color: transparent;
+  }
+
+  //Меню на весь экран
+  &--type-fullscreen {
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(1.1);
+
+    @include breakpoint($brp-1280) {
+      visibility: visible;
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    &.mobile-menu--open {
+      visibility: visible;
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  //Меню слева
+  &--type-left {
+    left: 0;
+    top: 0;
+    bottom: 0;
+    transform: translateX(-100%);
+    width: 240px;
+
+    @include breakpoint($brp-1280) {
+      transform: translateX(0);
+      width: auto;
+    }
+
+    &.mobile-menu--open {
+      transform: translateX(0);
+    }
+  }
+
+
+}

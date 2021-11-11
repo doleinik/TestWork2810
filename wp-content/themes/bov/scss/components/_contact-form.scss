@@ -1,0 +1,49 @@
+.wpcf7 {
+  width: 100%;
+  max-width: 810px;
+  .wpcf7-form-control-wrap {
+    position: relative;
+    display: block;
+    width: 100%;
+  }
+  .wpcf7-validation-errors,
+  .wpcf7-mail-sent-ok {
+
+  }
+
+  .wpcf7-mail-sent-ok {
+
+  }
+
+  .wpcf7-validation-errors {
+    margin-bottom: 15px;
+  }
+
+  div.wpcf7-response-output {
+
+
+    &.wpcf7-display-none {
+      display: none;
+    }
+  }
+
+  .screen-reader-response {
+    display: none;
+  }
+
+  //define( 'WPCF7_AUTOP', false );
+  //добавить  html_class="use-floating-validation-tip"
+  span.wpcf7-not-valid-tip {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    align-items: center;
+    padding: 0 10px;
+    background-color: #f43737;
+    color: #ffffff;
+  }
+}
+

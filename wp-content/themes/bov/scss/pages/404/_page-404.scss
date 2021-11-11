@@ -1,0 +1,27 @@
+.page-404 {
+  @include center-container();
+  @include fluidSize(45px, 60px, $brp-768, 1440px, 'padding-top');
+  @include fluidSize(60px, 100px, $brp-768, 1440px, 'padding-bottom');
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__desc {
+    margin-bottom: 30px;
+    @include fluidSize(16px, 20px, 320px, $design-width, 'font-size');
+    font-weight: 300;
+    line-height: 1.5;
+  }
+
+  &__link {
+
+  }
+}

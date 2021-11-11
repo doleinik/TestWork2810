@@ -1,0 +1,67 @@
+$themeFolder: "/wp-content/themes/bov/";
+
+$design-width: 1200px; //Без безопасных внутренних паддингов
+
+/* BREAKPOINTS */
+$brp-1920: 1920px;
+$brp-1280: 1280px;
+$brp-1200: 1200px;
+$brp-1140: 1140px;
+$brp-1170: 1170px;
+$brp-1024: 1024px;
+$brp-768: 768px;
+$brp-640: 640px;
+$brp-576: 576px;
+$brp-480: 480px;
+$brp-375: 375px;
+$brp-320: 320px;
+ 
+$brp-xs: 0;
+$brp-sm: 480px;
+$brp-md: 768px;
+$brp-lg: 1024px;
+$brp-xl: 1200px;
+
+$primary-font: "Roboto", sans-serif;
+// $secondary-font: "Playfair Display", sans-serif;
+$font-size-mobile: 14px;
+$font-size-desktop: 16px;
+
+/* COLORS */
+$blue-300: lighten(#5a2eaf, 15%);
+$blue-400: #5a2eaF;
+$blue-700: darken(#5a2eaf, 15%);
+
+$pink-300: lighten(#ff6377, 15%);
+$pink-400: #ff6377;
+$pink-700: darken(#ff6377, 15%);
+
+$accent-light: $blue-300;
+$accent: $blue-400;
+$accent-dark: $blue-700;
+
+$accent2-light: $pink-300;
+$accent2: $pink-400;
+$accent2-dark: $pink-700;
+
+
+$text-color1: #212121;
+
+
+//Transition
+$transition-style-fast: 0.15s ease-in-out;
+$transition-style-medium: 0.3s ease-in-out;
+$transition-style-slow: 0.5s ease-in-out;
+
+$z-indexes: (
+        'modal': 5000,
+        'dropdown': 4000,
+        'default': 1,
+        'below': -1,
+);
+
+// .modal {
+//     z-index: z('modal');
+// }
+
+

@@ -1,0 +1,29 @@
+.button {
+  display: inline-flex;
+  justify-content: center;
+  border: none;
+  background-color: #5c5c5c;
+  color: #fff;
+  text-align: center;
+  font-family: inherit;
+  font-size: 23px;
+  font-weight: 500;
+  white-space: normal;
+  transition: all $transition-style-fast;
+
+  @include breakpoint($brp-768){
+    padding: 50px 140px;
+  }
+
+  @include breakpoint($brp-320){
+    padding: 15px 30px;
+  }
+  &:hover {
+    background-color: #000;
+  }
+
+  &[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}

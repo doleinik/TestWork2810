@@ -1,0 +1,22 @@
+@import "libs/breakpoint/_breakpoint";
+@import "libs/lib";
+@import "const";
+@import "typography";
+
+html {
+  font-size: 10px;
+}
+body {
+  overflow-x: hidden;
+  font-family: $primary-font;
+}
+body.mce-content-body {
+  @include editor('');
+}
+
+.container {
+  width: 100%;
+  max-width: 1770px;
+  margin: 0 auto;
+  padding: 0 15px;
+}

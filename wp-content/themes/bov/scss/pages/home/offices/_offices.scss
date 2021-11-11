@@ -1,0 +1,172 @@
+.offices {
+  position: relative;
+  background-color: #5c5c5c;
+  display: flex;
+
+  @include breakpoint($brp-1280) {
+    padding: 145px 0 200px;
+  }
+
+  @include breakpoint($brp-768) {
+    padding-bottom: 60px;
+  }
+
+  @include breakpoint($brp-320) {
+    padding: 70px 0 460px;
+  }
+
+  &__map {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+
+    @include breakpoint($brp-768) {
+      height: auto;
+      top: 0;
+      left: 50%;
+    }
+
+    @include breakpoint($brp-320) {
+      height: 400px;
+      left: 0;
+    }
+
+    &-item {
+      height: 100%;
+      display: none;
+
+      @include breakpoint($brp-768) {
+        width: 50%;
+      }
+
+      @include breakpoint($brp-320) {
+        width: 100%;
+      }
+
+      &--active {
+        display: block;
+      }
+    }
+  }
+
+  &__title {
+    color: #fff;
+    font-weight: 600;
+    width: auto;
+
+    @include breakpoint($brp-1920) {
+      font-size: 48px;
+    }
+
+    @include breakpoint($brp-1280) {
+      margin-bottom: 50px;
+      font-size: 40px;
+    }
+
+    @include breakpoint($brp-768) {
+      text-align: left;
+    }
+
+    @include breakpoint($brp-320) {
+      text-align: center;
+      margin-bottom: 25px;
+      font-size: 35px;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__tab {
+
+    @include breakpoint($brp-768) {
+      width: calc(50% - 40px);
+      margin-right: 40px;
+      margin-left: 0;
+    }
+
+    @include breakpoint($brp-320) {
+      width: calc(100% - 40px);
+      margin: 0 auto;
+    }
+
+    &-toggle {
+      display: flex;
+      color: #fff;
+      overflow-x: scroll;
+
+      &::-webkit-scrollbar {
+        width: 0;
+      }
+
+      @include breakpoint($brp-1280) {
+        margin-bottom: 32px;
+      }
+
+      @include breakpoint($brp-320) {
+        margin-bottom: 20px;
+      }
+    }
+
+    &-item {
+      margin-right: 33px;
+      font-weight: 600;
+      color: #fff;
+      white-space: nowrap;
+      cursor: pointer;
+
+      @include breakpoint($brp-1280) {
+        font-size: 21px;
+      }
+
+      @include breakpoint($brp-320) {
+        font-size: 14px;
+      }
+
+      &--active {
+        color: #5e9575;
+        cursor: default;
+      }
+    }
+  }
+
+  &__content-item {
+    display: none;
+
+    &--active {
+      display: block;
+    }
+  }
+
+  &__heading {
+    color: #fff;
+    font-weight: 600;
+
+    @include breakpoint($brp-1280) {
+      margin-bottom: 28px;
+      font-size: 48px;
+    }
+
+    @include breakpoint($brp-320) {
+      margin-bottom: 20px;
+      font-size: 25px;
+    }
+  }
+
+  &__address {
+    color: #fff;
+    font-weight: 600;
+    line-height: 2;
+
+    @include breakpoint($brp-1280) {
+      font-size: 21px;
+    }
+
+    @include breakpoint($brp-320) {
+      font-size: 16px;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+.label__agree-default {
+  appearance: none;
+  border: 1px solid #d6d6cd;
+  background-color: #fff;
+  width: 22px;
+  height: 23px;
+  cursor: pointer;
+  position: relative;
+}
+.label__agree-default::before {
+  content: "🗸";
+  color: lightseagreen;
+  font-size: 18px;
+  font-weight: 600;
+  position: absolute;
+  right: 50%;
+  bottom: 50%;
+  transform: translate(50%, 50%);
+  opacity: 0;
+  transition: .1s ease-in;
+}
+.label__agree-default:checked::before {
+  opacity: 1;
+}

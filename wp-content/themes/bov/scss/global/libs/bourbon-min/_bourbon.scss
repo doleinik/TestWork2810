@@ -1,0 +1,102 @@
+/// A global setting to enable or disable the `$asset-pipeline` variable for all functions that accept it.
+///
+/// @type Bool
+
+$asset-pipeline: false !default;
+
+//Изменнынй миксин font-face с бурбона
+
+/// Checks if a list contains a value(s).
+///
+/// @access private
+///
+/// @param {List} $list
+///   The list to check against.
+///
+/// @param {List} $values
+///   A single value or list of values to check for.
+///
+/// @example scss - Usage
+///   contains($list, $value)
+///
+/// @return {Bool}
+
+@function contains($list, $values...) {
+  @each $value in $values {
+    @if type-of(index($list, $value)) != "number" {
+      @return false;
+    }
+  }
+
+  @return true;
+}
+
+@function font-url-prefixer($asset-pipeline) {
+  @if $asset-pipeline == true {
+    @return font-url;
+  } @else {
+    @return url;
+  }
+}
+
+@function font-source-declaration(
+  $font-family,
+  $file-path,
+  $asset-pipeline,
+  $file-formats,
+  $font-url) {
+
+  $src: ();
+
+  $formats-map: (
+          eot: "#{$file-path}.eot?#iefix" format("embedded-opentype"),
+          woff2: "#{$file-path}.woff2" format("woff2"),
+          woff: "#{$file-path}.woff" format("woff"),
+          ttf: "#{$file-path}.ttf" format("truetype"),
+          otf: "#{$file-path}.otf" format("opentype"),
+          svg: "#{$file-path}.svg##{$font-family}" format("svg")
+  );
+
+  @each $key, $values in $formats-map {
+    @if contains($file-formats, $key) {
+      $file-path: nth($values, 1);
+      $font-format: nth($values, 2);
+
+      @if $asset-pipeline == true {
+        $src: append($src, font-url($file-path) $font-format, comma);
+      } @else {
+        $src: append($src, url($file-path) $font-format, comma);
+      }
+    }
+  }
+
+  @return $src;
+}
+
+
+@mixin font-face(
+  $font-family,
+  $file-path,
+  $weight: normal,
+  $style: normal,
+  $asset-pipeline: $asset-pipeline,
+  $file-formats: otf eot woff2 woff ttf svg) {
+
+  $font-url-prefix: font-url-prefixer($asset-pipeline);
+
+  @font-face {
+    font-family: $font-family;
+    font-style: $style;
+    font-weight: $weight;
+
+    src: font-source-declaration(
+                    $font-family,
+                    $file-path,
+                    $asset-pipeline,
+                    $file-formats,
+                    $font-url-prefix
+    );
+
+    font-display: swap;
+  }
+}

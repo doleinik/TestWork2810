@@ -1,0 +1,202 @@
+.contacts {
+
+  @include breakpoint($brp-1280) {
+    padding: 110px 0 105px;
+  }
+
+  @include breakpoint($brp-320) {
+    padding: 70px 0 60px;
+  }
+
+  &__inner {
+
+    @include breakpoint($brp-1280) {
+      width: 100%;
+    }
+
+    @include breakpoint($brp-480) {
+      width: 85%;
+      margin: 0 auto;
+    }
+  }
+
+  &__title {
+    color: #000;
+    font-weight: 600;
+
+    @include breakpoint($brp-1920) {
+      font-size: 72px;
+    }
+
+    @include breakpoint($brp-1280) {
+      margin-bottom: 45px;
+      font-size: 60px;
+    }
+
+    @include breakpoint($brp-320) {
+      margin-bottom: 25px;
+      font-size: 35px;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @include breakpoint($brp-1024) {
+      flex-direction: row;
+      align-items: flex-start;
+    }
+
+    @include breakpoint($brp-320) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__elem {
+    width: 100%;
+    max-width: 790px;
+
+    @include breakpoint($brp-1024) {
+      width: 50%;
+    }
+
+    @include breakpoint($brp-320) {
+      width: 100%;
+    }
+
+    &-heading {
+      font-weight: 600;
+
+      @include breakpoint($brp-1920) {
+        font-size: 48px;
+      }
+
+      @include breakpoint($brp-1280) {
+        margin-bottom: 45px;
+        font-size: 40px;
+      }
+
+      @include breakpoint($brp-320) {
+        margin-bottom: 25px;
+        font-size: 25px;
+      }
+    }
+  }
+
+  &__info {
+    display: flex;
+
+    @include breakpoint($brp-1280) {
+      flex-direction: row;
+    }
+
+    @include breakpoint($brp-1024) {
+      flex-direction: column;
+    }
+
+    @include breakpoint($brp-640) {
+      flex-direction: row;
+    }
+
+    @include breakpoint($brp-320) {
+      flex-direction: column;
+    }
+  }
+
+  &__location {
+
+    @include breakpoint($brp-1280) {
+      margin-bottom: 0;
+    }
+
+    @include breakpoint($brp-320) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__address {
+    font-weight: 600;
+    line-height: 2;
+
+    @include breakpoint($brp-1280) {
+      margin-right: 66px;
+      margin-bottom: 37px;
+      font-size: 21px;
+    }
+
+    @include breakpoint($brp-320) {
+      margin-right: 30px;
+      margin-bottom: 30px;
+      font-size: 16px;
+    }
+  }
+
+  &__link {
+    font-weight: 600;
+
+    @include breakpoint($brp-1280) {
+      font-size: 38px;
+    }
+
+    @include breakpoint($brp-320) {
+      font-size: 24px;
+    }
+
+    &:hover {
+      color: #5e9575;
+    }
+  }
+
+  &__item {
+    &-heading {
+      margin-bottom: 15px;
+      font-weight: 600;
+
+      @include breakpoint($brp-1280) {
+        font-size: 21px;
+      }
+
+      @include breakpoint($brp-320) {
+        font-size: 18px;
+      }
+    }
+
+    &-link {
+      display: block;
+      margin-bottom: 15px;
+      color: #ff0036;
+      font-weight: 600;
+
+      @include breakpoint($brp-1280) {
+        font-size: 21px;
+      }
+
+      @include breakpoint($brp-320) {
+        font-size: 18px;
+      }
+
+      &:hover {
+        color: #5e9575;
+      }
+    }
+  }
+
+  &__text {
+    font-size: 21px;
+    font-weight: 600;
+    line-height: 2;
+
+    @include breakpoint($brp-1280) {
+      margin-bottom: 40px;
+      font-size: 21px;
+    }
+
+    @include breakpoint($brp-320) {
+      margin-bottom: 30px;
+      font-size: 18px;
+    }
+  }
+}

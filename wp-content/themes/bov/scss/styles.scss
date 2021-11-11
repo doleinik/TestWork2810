@@ -1,0 +1,27 @@
+@import "global/global";
+
+//Plugins core styles
+@import "../../../../node_modules/swiper/swiper-bundle";
+//@import "../../js/src/lightgallery/css/lightgallery";
+//@import  "../../../../../node_modules/aos/dist/aos";
+//@import "components/tabs";;
+
+
+//User styles
+@import "components/buttons";
+@import "components/contact-form";
+@import "components/footer";
+@import "components/form";
+@import "components/header";
+@import "components/mobile-menu";
+@import "components/slider";
+@import "components/socials";
+@import "components/castom-checkbox";
+
+@import "components/header";
+@import "components/footer";
+
+//Pages
+@import "pages/404/page-404";
+@import "pages/home/home";
+
