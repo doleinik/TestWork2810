@@ -1,6 +1,6 @@
 export default function () {
   //Phone mask
-  const phoneMask = ['+', '3', '8', '(', '0', /[1-9]/, /\d/, ')', ' ', /\d/, /\d/, /\d/, '-', /\d/, /\d/, '-', /\d/, /\d/];
+  const phoneMask = ['+', /[1-9]/, /\d/, /\d/, /\d/, /\d/, /\d/, /\d/, /\d/, /\d/, /\d/, /\d/, /\d/];
   const myInputs = document.querySelectorAll('input[type="tel"]');
 
   for (let i = 0; i < myInputs.length; i++) {
